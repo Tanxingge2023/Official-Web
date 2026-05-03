@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Popular Science</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="icon" href="../logo.jpg" type="image/jpeg">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<style>
+	.content-section {
+		margin-top: 3rem;
+	}
+
+	.content-section h2 {
+		margin-bottom: 1.5rem;
+	}
+
+	/* ✅ 关键：固定卡片布局 */
+	.sub-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, 240px);
+		justify-content: center;
+		gap: 1.5rem;
+		margin-top: 1.5rem;
+	}
+
+	/* ✅ 关键：锁死卡片尺寸 */
+	.sub-card {
+		width: 240px;
+		height: 260px;
+		border: 1px solid #eeeeee;
+		padding: 1rem;
+		text-align: center;
+		cursor: pointer;
+		transition: 0.3s ease;
+		background: #ffffff;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.sub-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+	}
+
+	.sub-card img {
+		width: 190px;
+		height: 130px;
+		object-fit: cover;
+		margin-bottom: 1rem;
+	}
+
+	.sub-card h3 {
+		margin: 0;
+		font-size: 1rem;
+		line-height: 1.4;
+	}
+</style>
+	</head>
+
+	<body class="is-preload">
+
+		<div id="wrapper">
+
+			<header id="header">
+			</header>
+
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="../index.html">Home</a></li>
+					<li><a href="../lecture notes/lecture notes.html">Lecture Notes</a></li>
+					<li class="active"><a>Popular Science</a></li>
+					<li><a href="../scicom/scicom.html">Science Community</a></li>
+					<li><a href="../iaac.html">IAAC</a></li>
+				</ul>
+			</nav>
+
+			<div id="main">
+
+				<section class="post">
+					<header class="major">
+						<span class="date">May 1, 2026</span>
+						<h1>Popular Science Center</h1>
+						<p style="text-align: justify;">
+							Here you can find popular science resources on physics and astronomy.
+							All resources are free to share and support online viewing or downloading.
+						</p>
+					</header>
+
+					<section class="content-section">
+						<p>
+							1. All popular science resources on TanXG are free to share.
+							Please indicate the source for reprinting, and unauthorized commercial use is prohibited.
+						</p>
+						<p>
+							2. Click the corresponding card to open the PDF directly, supporting online viewing and downloading.
+						</p>
+						<p>
+							3. If the resource link is invalid, please provide feedback via email or our official WeChat account in time.
+						</p>
+					</section>
+
+					<section class="content-section">
+						<h2>Astronomy</h2>
+
+						<div class="sub-card-grid">
+							<div class="sub-card" onclick="openPdf('../popsci/太阳系一日游.pdf')">
+								<img src="../popsci/太阳系一日游.png" alt="A Tour of the Solar System">
+								<h3>太阳系一日游</h3>
+							</div>
+
+							<div class="sub-card" onclick="openPdf('../popsci/八大行星名称的由来.pdf')">
+								<img src="../popsci/八大行星名称的由来.png" alt="Origin of the Names of the Eight Planets">
+								<h3>八大行星名称的由来</h3>
+							</div>
+
+							<div class="sub-card" onclick="openPdf('../popsci/宇宙有多大.pdf')">
+								<img src="../popsci/宇宙有多大.png" alt="How Big Is the Universe?">
+								<h3>宇宙有多大？</h3>
+							</div>
+
+							<div class="sub-card" onclick="openPdf('../popsci/中国古代天文学略谈.pdf')">
+								<img src="../popsci/中国古代天文学略谈.png" alt="A Brief Introduction to Ancient Chinese Astronomy">
+								<h3>中国古代天文学略谈</h3>
+							</div>
+
+							<div class="sub-card" onclick="openPdf('../popsci/宇宙动物园奇妙夜.pdf')">
+								<img src="../popsci/宇宙动物园奇妙夜.png" alt="Cosmic Zoo">
+								<h3>宇宙动物园奇妙夜</h3>
+							</div>
+						</div>
+					</section>
+
+					<section class="content-section">
+						<h2>Physics in Daily Life</h2>
+
+						<div class="sub-card-grid">
+							<div class="sub-card" onclick="openPdf('../popsci/音色背后的奥秘.pdf')">
+								<img src="../popsci/音色背后的奥秘.png" alt="The Mystery Behind Timbre">
+								<h3>“音色”背后的奥秘</h3>
+							</div>
+						</div>
+					</section>
+
+				</section>
+
+			</div>
+
+			<div id="copyright">
+				<ul>
+					<li>&copy; 2026 TanXG</li>
+					<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+
+		</div>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+		<script>
+			function openPdf(pdfUrl) {
+				window.open(pdfUrl, '_self');
+			}
+		</script>
+
+	</body>
+</html>
