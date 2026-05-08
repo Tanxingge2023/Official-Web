@@ -78,10 +78,18 @@
 	pointer-events: auto;
 }
 
-			.sub-card:hover {
-				transform: translateY(-5px);
-				box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-			}
+.sub-card {
+  border: 1px solid #eeeeee; /* 边框 */
+  padding: 1rem; /* 内边距 */
+  background: #fff; /* 背景白色 */
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sub-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
 
 			.sub-card img {
 				width: 100%;
@@ -121,7 +129,7 @@
 						<span class="date">May 1, 2026</span>
 						<h1>Lecture Notes</h1>
 						<p style="text-align: justify;">
-							Here you can find lecture notes on physics and astronomy at fundamental knowledge or research frontier level.
+							Here you can find lecture notes on physics and astronomy from fundamental knowledge to research frontier level.
 							All the lecture notes are written by TanXG fellows and are free to download.
 							Explore and choose your favourite!
 						</p>
@@ -134,8 +142,7 @@
 							and commercial use is strictly prohibited.
 						</p>
 						<p>
-							2. Click the corresponding card to enter the details page, where you can view the introduction and access
-							the PDF download link. The name with "CN/EN" means it's written in Chinese/English.
+							2. Click the corresponding card to enter the details page, where you can view the introduction and access the PDF download link. The name with "CN/EN" means it's written in Chinese/English.
 						</p>
 						<p>
 							3. If the download link is invalid, please contact us via email or official WeChat account for feedback.
