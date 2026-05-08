@@ -201,7 +201,7 @@
 				const subGrid = document.querySelector(`.sub-card-grid[data-group="${groupKey}"]`);
 				const isExpanded = subGrid.classList.toggle('show');
 				cardElement.classList.toggle('expanded');
-				localStorage.setItem(`card_expanded_${groupKey}`, isExpanded);
+				localStorage.setItem(`lecture_notes_card_expanded_${groupKey}`, isExpanded);
 			}
 
 			window.addEventListener('DOMContentLoaded', function() {
@@ -209,7 +209,7 @@
 					const groupKey = card.getAttribute('onclick').match(/'([^']+)'/)[1];
 					const subGrid = document.querySelector(`.sub-card-grid[data-group="${groupKey}"]`);
 
-					if (localStorage.getItem(`card_expanded_${groupKey}`) === 'true' && subGrid) {
+					if (localStorage.getItem(`lecture_notes_card_expanded_${groupKey}`) === 'true' && subGrid) {
 						card.classList.add('expanded');
 						subGrid.classList.add('show');
 					}

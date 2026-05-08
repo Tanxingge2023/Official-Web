@@ -234,12 +234,12 @@
 						<h2>Important Links</h2>
 						<div class="highlight-card">
 							<p>
-								<strong>My IAAC ambassador profile:</strong>
-								<a href="https://iaac.space/en/dliang" target="_blank" rel="noopener noreferrer">https://iaac.space/en/dliang</a>
+								<strong>The Official IAAC website:</strong>
+								<a href="https://iaac.space/" target="_blank" rel="noopener noreferrer">https://iaac.space/</a>
 							</p>
 							<p>
-								<strong>Official IAAC website:</strong>
-								<a href="https://iaac.space/" target="_blank" rel="noopener noreferrer">https://iaac.space/</a>
+								<strong>IAAC ambassador profile of D.Liang:</strong>
+								<a href="https://iaac.space/en/dliang" target="_blank" rel="noopener noreferrer">https://iaac.space/en/dliang</a>
 							</p>
 						</div>
 					</section>
@@ -270,7 +270,7 @@
 				const subGrid = document.querySelector(`.sub-card-grid[data-group="${groupKey}"]`);
 				const isExpanded = subGrid.classList.toggle('show');
 				cardElement.classList.toggle('expanded');
-				localStorage.setItem(`card_expanded_${groupKey}`, isExpanded);
+				localStorage.setItem(`iaac_card_expanded_${groupKey}`, isExpanded);
 			}
 
 			window.addEventListener('DOMContentLoaded', function() {
@@ -278,7 +278,7 @@
 					const groupKey = card.getAttribute('onclick').match(/'([^']+)'/)[1];
 					const subGrid = document.querySelector(`.sub-card-grid[data-group="${groupKey}"]`);
 
-					if (localStorage.getItem(`card_expanded_${groupKey}`) === 'true' && subGrid) {
+					if (localStorage.getItem(`iaac_card_expanded_${groupKey}`) === 'true' && subGrid) {
 						card.classList.add('expanded');
 						subGrid.classList.add('show');
 					}
