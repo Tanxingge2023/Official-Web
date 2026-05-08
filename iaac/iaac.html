@@ -1,0 +1,290 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>IAAC in TanXG</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="icon" href="../logo.jpg" type="image/jpeg">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<style>
+			.note-section {
+				margin-top: 3rem;
+			}
+
+			.note-section h2 {
+				margin-bottom: 1rem;
+			}
+
+			.iaac-actions {
+				display: flex;
+				justify-content: center;
+				gap: 1rem;
+				flex-wrap: wrap;
+				margin-top: 2rem;
+			}
+
+			.iaac-badge {
+				display: inline-block;
+				border: 1px solid #eeeeee;
+				padding: 0.35rem 0.8rem;
+				font-size: 0.75rem;
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+				margin-bottom: 1.2rem;
+			}
+
+			.main-card {
+				border: 1px solid #eeeeee;
+				padding: 1.5rem;
+				margin: 2rem 0 1rem 0;
+				text-align: center;
+				cursor: pointer;
+				transition: 0.3s ease;
+				position: relative;
+				background: #ffffff;
+			}
+
+			.main-card:hover {
+				background: #f7f7f7;
+			}
+
+			.main-card::after {
+				content: "▼";
+				position: absolute;
+				right: 1.5rem;
+				top: 50%;
+				transform: translateY(-50%);
+				transition: 0.3s ease;
+			}
+
+			.main-card.expanded::after {
+				transform: translateY(-50%) rotate(180deg);
+			}
+
+			.sub-card-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+				gap: 1.5rem;
+				margin-bottom: 0;
+				max-height: 0;
+				opacity: 0;
+				transform: translateY(-10px);
+				overflow: hidden;
+				pointer-events: none;
+				transition:
+					max-height 0.6s ease,
+					opacity 0.4s ease,
+					transform 0.4s ease,
+					margin-bottom 0.4s ease;
+			}
+
+			.sub-card-grid.show {
+				max-height: 900px;
+				opacity: 1;
+				transform: translateY(0);
+				margin-bottom: 2rem;
+				pointer-events: auto;
+			}
+
+			.sub-card {
+				border: 1px solid #eeeeee;
+				padding: 1.4rem;
+				background: #ffffff;
+				transition: 0.3s ease;
+				min-height: 210px;
+			}
+
+			.sub-card:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+			}
+
+			.sub-card h3 {
+				margin: 0 0 0.7rem 0;
+				font-size: 1rem;
+			}
+
+			.sub-card p {
+				font-size: 0.9rem;
+				margin-bottom: 0;
+				text-align: justify;
+			}
+
+			.highlight-card {
+				border: 1px solid #eeeeee;
+				padding: 1.5rem;
+				margin-top: 1.5rem;
+				background: linear-gradient(135deg, rgba(245,245,245,0.9), rgba(255,255,255,0.9));
+			}
+		</style>
+	</head>
+
+	<body class="is-preload">
+
+		<div id="wrapper">
+
+			<header id="header">
+			</header>
+
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="../index.html">Home</a></li>
+					<li><a href="../lecture notes/lecture notes.html">Lecture Notes</a></li>
+					<li><a href="../popsci/popsci.html">Popular Science</a></li>
+					<li><a href="../scicom/scicom.html">Science Community</a></li>
+					<li class="active"><a href="../iaac/iaac.html">IAAC</a></li>
+				</ul>
+			</nav>
+
+			<div id="main">
+
+				<section class="post">
+					<header class="major">
+						<span class="date">May 1, 2026</span>
+						<h1>International Astronomy and Astrophysics Competition (IAAC)</h1>
+						<p style="text-align: justify;">
+							The International Astronomy and Astrophysics Competition (IAAC) is an online science competition
+							for middle school/college students around the world who are interested in astronomy, astrophysics, and the universe.
+							Some of TanXG fellows are IAAC ambassadors, and we hope to introduce this opportunity to more young people, share useful
+							preparation resources, and encourage students to explore astronomy beyond the standard classroom.
+						</p>
+					</header>
+
+					<section class="note-section">
+						<h2>About IAAC</h2>
+						<p>
+							IAAC provides astronomy and astrophysics problems that combine scientific reasoning, calculation,
+							and curiosity-driven learning. The competition is designed to be accessible internationally: students
+							can participate online and work through challenging problems with only basic tools and an internet connection.
+						</p>
+						<p>
+							For students who enjoy physics, mathematics, space science, or scientific problem solving, IAAC can be
+							a good starting point for building confidence in astronomy and discovering deeper topics such as stellar
+							physics, orbital motion, observational astronomy, and cosmology.
+						</p>
+					</section>
+
+					<section class="note-section">
+						<div class="main-card" onclick="toggleSubCards(this, 'group1')">
+							<h2>For New Participants</h2>
+						</div>
+
+						<div class="sub-card-grid" data-group="group1">
+							<div class="sub-card">
+								<h3>What You Need</h3>
+								<p>
+									A basic background in physics and mathematics is helpful. More importantly, you should be willing
+									to read carefully, think quantitatively, and learn new astronomical ideas while solving problems.
+								</p>
+							</div>
+
+							<div class="sub-card">
+								<h3>How to Prepare</h3>
+								<p>
+									Review mechanics, gravitation, light, basic statistics, and introductory astronomy. Try to explain
+									your solution steps clearly rather than only writing final numerical answers.
+								</p>
+							</div>
+
+							<div class="sub-card">
+								<h3>Why Join</h3>
+								<p>
+									IAAC is not only about awards. It is also a chance to test your interest in astronomy, develop
+									problem-solving habits, and connect classroom physics with real questions about the universe.
+								</p>
+							</div>
+						</div>
+					</section>
+
+					<section class="note-section">
+						<div class="main-card" onclick="toggleSubCards(this, 'group2')">
+							<h2>Ambassador Activities</h2>
+						</div>
+
+						<div class="sub-card-grid" data-group="group2">
+							<div class="sub-card">
+								<h3>Sharing Information</h3>
+								<p>
+									I will use this page to share IAAC-related information, reminders, and useful links for students
+									who are interested in astronomy and astrophysics competitions.
+								</p>
+							</div>
+
+							<div class="sub-card">
+								<h3>Learning Resources</h3>
+								<p>
+									Future updates may include short notes, recommended topics, and preparation suggestions for
+									students beginning their astronomy journey.
+								</p>
+							</div>
+
+							<div class="sub-card">
+								<h3>Community Outreach</h3>
+								<p>
+									Through TanXG, I hope to help more students see astronomy as an open, inspiring, and accessible
+									field of scientific exploration.
+								</p>
+							</div>
+						</div>
+					</section>
+
+					<section class="note-section">
+						<h2>Important Links</h2>
+						<div class="highlight-card">
+							<p>
+								<strong>My IAAC ambassador profile:</strong>
+								<a href="https://iaac.space/en/dliang" target="_blank" rel="noopener noreferrer">https://iaac.space/en/dliang</a>
+							</p>
+							<p>
+								<strong>Official IAAC website:</strong>
+								<a href="https://iaac.space/" target="_blank" rel="noopener noreferrer">https://iaac.space/</a>
+							</p>
+						</div>
+					</section>
+
+				</section>
+
+			</div>
+
+			<div id="copyright">
+				<ul>
+					<li>&copy; 2026 TanXG</li>
+					<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+
+		</div>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+		<script>
+			function toggleSubCards(cardElement, groupKey) {
+				const subGrid = document.querySelector(`.sub-card-grid[data-group="${groupKey}"]`);
+				const isExpanded = subGrid.classList.toggle('show');
+				cardElement.classList.toggle('expanded');
+				localStorage.setItem(`card_expanded_${groupKey}`, isExpanded);
+			}
+
+			window.addEventListener('DOMContentLoaded', function() {
+				document.querySelectorAll('.main-card').forEach(function(card) {
+					const groupKey = card.getAttribute('onclick').match(/'([^']+)'/)[1];
+					const subGrid = document.querySelector(`.sub-card-grid[data-group="${groupKey}"]`);
+
+					if (localStorage.getItem(`card_expanded_${groupKey}`) === 'true' && subGrid) {
+						card.classList.add('expanded');
+						subGrid.classList.add('show');
+					}
+				});
+			});
+		</script>
+
+	</body>
+</html>
